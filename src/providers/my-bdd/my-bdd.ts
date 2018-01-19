@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import { Subscription } from 'rxjs/Subscription';
 
 /*
   Generated class for the MyBddProvider provider.
@@ -17,17 +19,10 @@ export class MyBddProvider {
     this.getUsers();
   }
 
-  getUsers(){
-    this.http.get('http://127.0.0.1:8000/bdd')
-            .subscribe(data => {
-                var users = data;
-                console.log(users);
-                //return users;
-                //alert(JSON.stringify(data));
-       },
-            err => {
-                alert(err);
-      });
+  getUsers(): Observable<any> {
+
+    //Renvoi un Observable -> En gros ça envoie un objet qui attend une réponse du serveur
+    return this.http.get('http://127.0.0.1:8000/bdd');
   }
 
 }

@@ -19,7 +19,7 @@ import { MyBddProvider } from '../../providers/my-bdd/my-bdd';
 })
 export class LoginPage {
 
-  public users: any;
+  public users: any[];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public MyBddProvider: MyBddProvider) {
   
@@ -30,8 +30,16 @@ export class LoginPage {
   }
 
   ionViewDidEnter(){
-    this.users = JSON.stringify(this.MyBddProvider.getUsers());
-    console.log(this.users);
+    this.MyBddProvider.getUsers()
+      //Au moment ou la requête est terminé, subscribe se déclenche !
+      .subscribe(data => {
+            var users = data;
+            console.log(users);
+      },
+        err => {
+            alert(err);
+      });
+    
   }
 
   login(){
