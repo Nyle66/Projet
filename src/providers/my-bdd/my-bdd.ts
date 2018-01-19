@@ -14,10 +14,15 @@ export class MyBddProvider {
 
   constructor(public http: HttpClient) {
     
+    this.getUsers();
+  }
+
+  getUsers(){
     this.http.get('http://127.0.0.1:8000/bdd')
             .subscribe(data => {
                 var users = data;
                 console.log(users);
+                //return users;
                 //alert(JSON.stringify(data));
        },
             err => {

@@ -18,15 +18,29 @@ import { MyBddProvider } from '../../providers/my-bdd/my-bdd';
   providers: [MyBddProvider]
 })
 export class LoginPage {
-  users: any;
+
+  public users: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public MyBddProvider: MyBddProvider) {
-    
+  
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
 
+  ionViewDidEnter(){
+    this.users = JSON.stringify(this.MyBddProvider.getUsers());
+    console.log(this.users);
+  }
+
+  login(){
+    // if(){
+    //   console.log("succes");
+    // }
+    // else{
+    //   console.log("fail");
+    // }
+  }
 
 }
