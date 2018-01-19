@@ -32,7 +32,7 @@ export class LoginPage {
   ionViewDidEnter(){
     this.MyBddProvider.getUsers()
       //Au moment ou la requête est terminé, subscribe se déclenche !
-      .subscribe(data => {
+      .subscribe( (data) => {
             var users = data;
             console.log(users);
       },
