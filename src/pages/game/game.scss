@@ -4,7 +4,12 @@ page-game {
     align-content: center;
     vertical-align: center;
 
-
+    .red{
+        color: red;
+    }
+    .blue{
+        color: blue;
+    }
     #fond{
         background-image: url('../../assets/imgs/ground.jpg');
         background-repeat: repeat;
@@ -20,6 +25,18 @@ page-game {
     .water{
         width: 40px;
         height: auto;
+    }
+    #texte{
+        height: 120px;
+        background-color: #ADA395;
+        text-align: center;
+        align-content: center;
+        vertical-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    #attack{
+        //display: none;
     }
     ion-col{
         border: 1px solid white;

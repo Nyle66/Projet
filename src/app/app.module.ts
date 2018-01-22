@@ -12,6 +12,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { MyBddProvider } from '../providers/my-bdd/my-bdd';
 import { TestPage } from '../pages/test/test';
+import { Calendar } from '@ionic-native/calendar';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { TestPage } from '../pages/test/test';
     HttpModule,
     HttpClientModule,
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -33,13 +34,15 @@ import { TestPage } from '../pages/test/test';
     HomePage,
     LoginPage,
     GamePage,
-    TestPage
+    TestPage,
+    
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    MyBddProvider
+    MyBddProvider,
+    Calendar
   ]
 })
 export class AppModule {}

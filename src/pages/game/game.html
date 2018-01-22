@@ -26,9 +26,9 @@
       <ion-col col-4 class="zone team1"> </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col col-4 class="zone team1"> </ion-col>
-      <ion-col col-4 class="zone team1"> </ion-col>
-      <ion-col col-4 class="zone team1"> </ion-col>
+      <ion-col col-4 class="zone team1"> <ion-icon name="body" *ngIf="hide1 == true" (click)="choice1()" class="1 red"></ion-icon></ion-col>
+      <ion-col col-4 class="zone team1"> <ion-icon name="body" *ngIf="hide2 == true" (click)="choice2()" class="2 red"></ion-icon></ion-col>
+      <ion-col col-4 class="zone team1"> <ion-icon name="body" *ngIf="hide3 == true" (click)="choice3()" class="3 red"></ion-icon></ion-col>
     </ion-row>
 
     <ion-row>
@@ -36,20 +36,35 @@
     </ion-row>
 
     <ion-row>
-      <ion-col col-4 class="zone team2"> <ion-icon name="body" (click)="choice()"></ion-icon></ion-col>
-      <ion-col col-4 class="zone team2"> <ion-icon name="body"></ion-icon></ion-col>
-      <ion-col col-4 class="zone team2"> <ion-icon name="body"></ion-icon></ion-col>
+      <ion-col col-4 class="zone team2"> <ion-icon name="body" *ngIf="hide4 == true" (click)="choice4()" class="4 blue"></ion-icon> <ion-icon name="body" *ngIf="hide12 == true" (click)="choice12()" class="12 red"></ion-icon> </ion-col>
+      <ion-col col-4 class="zone team2"> <ion-icon name="body" *ngIf="hide5 == true" (click)="choice5()" class="5 blue"></ion-icon></ion-col>
+      <ion-col col-4 class="zone team2"> <ion-icon name="body" *ngIf="hide6 == true" (click)="choice6()" class="6 blue"></ion-icon></ion-col>
     </ion-row>
     <ion-row>
-      <ion-col col-4 class="zone team2"> <img class="fire" src="../../assets/imgs/fire.png"></ion-col>
-      <ion-col col-4 class="zone team2"> <img class="water" src="../../assets/imgs/water.png"></ion-col>
-      <ion-col col-4 class="zone team2"> <img class="earth" src="../../assets/imgs/earth.png"></ion-col>
-    </ion-row>
-    <ion-row>
+      <ion-col col-4 class="zone team2"> <ion-icon name="body" *ngIf="hide42 == true" (click)="choice42()" class="42 blue"></ion-icon> <ion-icon name="body" *ngIf="hide13 == true" (click)="choice13()" class="13 red"></ion-icon></ion-col>
       <ion-col col-4 class="zone team2"> </ion-col>
+      <ion-col col-4 class="zone team2"> </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-4 class="zone team2"> <ion-icon name="body" *ngIf="hide43 == true" (click)="choice43()" class="43 blue"></ion-icon></ion-col>
       <ion-col col-4 class="zone team2"> </ion-col>
       <ion-col col-4 class="zone team2"> </ion-col>
     </ion-row>
     
+  </ion-grid>
+
+  <br>
+
+  <ion-grid>
+    <ion-row col-12 id="texte">
+      <div *ngIf="hide == false" id="attack">
+        <h2>Choix :</h2>
+        <button ion-button (click)="attackF()">Attaque frontale</button><button ion-button (click)="attackC()">Attaque de coté</button>
+      </div>
+      <div *ngIf="hideD == false" id="defense">
+        <h2>Choix :</h2>
+        <button ion-button (click)="defenseF = 1">Defense frontale</button><button ion-button (click)="defenseC = 1">Defense de coté</button>
+      </div>
+    </ion-row>
   </ion-grid>
 </ion-content>
