@@ -1,6 +1,8 @@
+import {GamePage} from '../game/game';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { MyBddProvider } from '../../providers/my-bdd/my-bdd';
+import { TestPage } from '../test/test';
 
 
 
@@ -18,11 +20,15 @@ import { MyBddProvider } from '../../providers/my-bdd/my-bdd';
   providers: [MyBddProvider]
 })
 export class LoginPage {
+  testPage: any;
+  gamePage: any;
+
 
   public users: any[];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public MyBddProvider: MyBddProvider) {
-  
+    this.gamePage = GamePage;
+    this.testPage = TestPage;
   }
 
   ionViewDidLoad() {

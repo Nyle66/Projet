@@ -1,3 +1,4 @@
+import {GamePage} from '../pages/game/game';
 import {LoginPage} from '../pages/login/login';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -10,12 +11,15 @@ import { HttpClientModule } from '@angular/common/http'
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { MyBddProvider } from '../providers/my-bdd/my-bdd';
+import { TestPage } from '../pages/test/test';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    LoginPage
+    LoginPage,
+    GamePage,
+    TestPage
   ],
   imports: [
     HttpModule,
@@ -27,7 +31,9 @@ import { MyBddProvider } from '../providers/my-bdd/my-bdd';
   entryComponents: [
     MyApp,
     HomePage,
-    LoginPage
+    LoginPage,
+    GamePage,
+    TestPage
   ],
   providers: [
     StatusBar,

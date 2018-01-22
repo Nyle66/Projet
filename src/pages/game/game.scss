@@ -1,3 +1,49 @@
 page-game {
 
+    text-align: center;
+    align-content: center;
+    vertical-align: center;
+
+
+    #fond{
+        background-image: url('../../assets/imgs/ground.jpg');
+        background-repeat: repeat;
+    }
+    .fire{
+        width: 40px;
+        height: auto;
+    }
+    .earth{
+        width: 40px;
+        height: auto;
+    }
+    .water{
+        width: 40px;
+        height: auto;
+    }
+    ion-col{
+        border: 1px solid white;
+    }
+
+    .zone{
+        height: 65px;
+    }
+    .limite{
+        width: 10px;
+        background-color: #F53855;
+        border-radius: 30%;
+    }
+    .team1{
+        background-color: #F0CA4D;
+    }
+    .team2{
+        background-color: #46B29D;
+    }
+
+    ion-icon{
+        font-size: 3em;
+        //color: blue;
+    }
+    
+
 }
