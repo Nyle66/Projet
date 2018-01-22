@@ -11,16 +11,14 @@ import { HttpClientModule } from '@angular/common/http'
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { MyBddProvider } from '../providers/my-bdd/my-bdd';
-import { TestPage } from '../pages/test/test';
-import { Calendar } from '@ionic-native/calendar';
+
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     LoginPage,
-    GamePage,
-    TestPage
+    GamePage
   ],
   imports: [
     HttpModule,
@@ -33,16 +31,14 @@ import { Calendar } from '@ionic-native/calendar';
     MyApp,
     HomePage,
     LoginPage,
-    GamePage,
-    TestPage,
+    GamePage
     
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    MyBddProvider,
-    Calendar
+    MyBddProvider
   ]
 })
 export class AppModule {}
